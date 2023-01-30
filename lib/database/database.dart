@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:uuid/uuid.dart';
 
 import '../helpers/phrases.dart';
 import '../models/journal.dart';
@@ -18,7 +18,7 @@ Map<String, Journal> generateRandomDatabase({
       Duration(days: timeGap),
     ); // Gera um dia
 
-    String id = const Uuid().v1();
+    String id = const Uuid().v1().toString();
 
     map[id] = Journal(
       id: id,
